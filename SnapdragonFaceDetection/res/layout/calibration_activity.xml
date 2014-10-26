@@ -1,0 +1,102 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF" >
+
+    <!-- the camera preview display -->
+
+    <org.stevej.android.facedetection.ui.FacialFeatureOverlay
+        android:id="@+id/facial_feature_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <org.stevej.android.facedetection.ui.CalibrationOverlay
+        android:id="@+id/calibration_overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <org.stevej.android.facedetection.ui.VideoPreview
+        android:id="@+id/video_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <org.stevej.android.facedetection.ui.CameraPreview
+        android:id="@+id/camera_preview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/controls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom" >
+
+        <LinearLayout
+            android:id="@+id/video_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/video_start_pause_processing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_play" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/video_stop_processing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_media_stop" >
+            </ImageButton>
+
+            <ImageButton
+                android:id="@+id/video_next_frame_processing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_media_next" >
+            </ImageButton>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/app_controls"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/video_controls"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/mirror"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/flip_horizontal" />
+
+            <ImageButton
+                android:id="@+id/calibration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/calibrate" />
+
+            <ImageButton
+                android:id="@+id/detection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/face_detection" />
+            <ImageButton
+                android:id="@+id/analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/analysis" />
+
+            <ImageButton
+                android:id="@+id/show_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_preferences" >
+            </ImageButton>
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

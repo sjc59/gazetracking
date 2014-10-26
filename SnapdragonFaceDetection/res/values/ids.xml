@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="draw_marker" type="id"/>
+    <item name="draw_features" type="id"/>
+    <item name="draw" type="id"/>
+    <item name="render_frame" type="id"/>
+    <item name="set_dimensions" type="id"/>
+    <item name="set_num_contours" type="id"/>
+
+    <!-- id of message sent to camera manager to recycle a camera preview buffer -->
+    <item name="recycle_buffer" type="id"/>
+    <!-- id of message sent to video frame processor when a video frame is available -->
+    <item name="process_video_frame" type="id"/>
+
+    <!-- id of message sent to a frame processor when the feature to detect is to be modified -->
+    <item name="set_feature_detector" type="id"/>
+    <item name="playback_control_reset" type="id"/>
+
+</resources>
